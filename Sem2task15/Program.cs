@@ -19,4 +19,4 @@ var week = new Dictionary<int, string>()
 };
 
 string day = week[numberDay]; 
-Console.WriteLine(day);
+Console.WriteLine(numberDay == 6 || numberDay == 7 ? "Этот день выходной - " + day : "Этот день не выходной - " + day);
