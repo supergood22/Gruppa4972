@@ -1,4 +1,4 @@
-﻿/Заполняем одномерный массив
+﻿//Заполняем одномерный массив
 int[] GenArray(int num, int lowBorder, int highBorder)
 {
 
