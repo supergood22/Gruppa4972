@@ -37,9 +37,9 @@ public class Answer {
     {
       // Введите свое решение ниже
       Console.WriteLine("The averages in columns are:");
-    for (int i = 0; i < list.GetLength(); i++)
+    for (int i = 0; i < list.Length; i++)
     {
-      Console.WriteLine(list[i] + "\t");
+      Console.Write(list[i].ToString("0.00") + "\t");
     }
     
     }
@@ -50,12 +50,13 @@ public class Answer {
       double[] averageInCol = new double[matrix.GetLength(1)];
       for (int j=0; j < matrix.GetLength(1); j++)
       {
-        int sum = 0;
+        double mgl = matrix.GetLength(0);
+        double sum = 0.00;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-          int sum += matrix[i, j];
+            sum += matrix[i, j];
         }
-        averageInCol[i] = sum / matrix.GetLength(1);
+        averageInCol[j] = Math.Round(sum / matrix.GetLength(0), 2);
       }
       return averageInCol;
     }
@@ -71,9 +72,9 @@ public class Answer {
            k = int.Parse(args[2]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-           n = 3;
-           m = 4;
-           k = 2;
+           n = 4;
+           m = 5;
+           k = 3;
         }
 
         // Не удаляйте строки ниже
